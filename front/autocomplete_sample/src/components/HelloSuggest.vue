@@ -5,6 +5,15 @@
     :list="simpleSuggestionList"
     :filter-by-query="true">
 <!-- Filter by input text to only show the matching results -->
+    <div slot="misc-item-above" slot-scope="{ suggestions, query }">
+      <div class="misc-item">
+        <span>You're searching for {{ query }}.</span>
+      </div>
+      <div class="misc-item">
+        <span>{{ suggestions.length }} suggestions are shown...</span>
+      </div>
+      <hr>
+    </div>
   </VueSimpleSuggest>
 </template>
 

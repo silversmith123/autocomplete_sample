@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloSuggest/>
+    <HelloAsyncSuggest/>
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import HelloSuggest from './components/HelloSuggest.vue'
+import HelloAsyncSuggest from './components/HelloAsyncSuggest.vue'
 
 export default {
   name: 'App',
   components: {
     //HelloWorld
-    HelloSuggest
+    HelloAsyncSuggest
   }
 }
 </script>

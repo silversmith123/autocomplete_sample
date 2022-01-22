@@ -1,14 +1,32 @@
-from bottle import route, run, HTTPResponse
+from bottle import request, route, run, HTTPResponse
+from elasticsearch import Elasticsearch
 import json
 
 @route('/')
-def suggest():    
-    body =json.dumps([
-      {'id':1, 'title':'Vue.js', 'img':'/img/logo.png'},
-      {'id':2, 'title':'React.js', 'img':'/img/logo.png'},
-      {'id':3, 'title':'Angular.js', 'img':'/img/logo.png'}
-      ])
-    response = HTTPResponse(status=200, body=body)
+def suggest():
+    es = Elasticsearch('http://localhost:9200')
+    query = { 
+     "query": { 
+       "bool": { 
+         "should": [
+           { 
+             "match": { 
+               "search_word.readingform": { 
+                 "query": request.query.text,
+                 "fuzziness":"AUTO",
+                 "operator": "and" 
+               } 
+             } 
+          } 
+         ] 
+       }
+      },
+      "sort": "priority" 
+    }
+    es_json = es.search(query, 'my_suggest')
+    body = [{'id': v['_id'], 'text': v['_source']['suggest_word'], 'img': v['_source']['img']} for v in es_json['hits']['hits']]
+
+    response = HTTPResponse(status=200, body=json.dumps(body))
     response.headers['Content-Type'] = 'application/json'
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS'

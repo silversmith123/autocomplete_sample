@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4590b75bf857310c1bf07109e3f8230becf94e849e884837fcedd6b954530314"
+            "sha256": "e4b3ab1d6c04192ffcaa52c9c6ef81bde3e6e5bfbff8aa1188622c6a5d4477cb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,14 +24,36 @@
             "index": "pypi",
             "version": "==0.12.19"
         },
+        "certifi": {
+            "hashes": [
+                "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872",
+                "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"
+            ],
+            "version": "==2021.10.8"
+        },
+        "elasticsearch": {
+            "hashes": [
+                "sha256:213eaae9937924a9c523792748e7b0fc7ea2041d32a646538cbe81e52f852e1f",
+                "sha256:8adf8bc351ed55df7296be1009d38a1c999c0abc7d8700fa88533f1ad6087c5e"
+            ],
+            "index": "pypi",
+            "version": "==7.16.3"
+        },
         "mod-wsgi": {
             "hashes": [
                 "sha256:1f1a22511e7700c7d4d26b14768937c919ae5f53e80f5352226a218d866156ec"
             ],
             "index": "pypi",
             "version": "==4.9.0"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed",
+                "sha256:0e7c33d9a63e7ddfcb86780aac87befc2fbddf46c58dbb487e0855f7ceec283c"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
+            "version": "==1.26.8"
         }
     },
     "develop": {}
-}develop": {}
 }

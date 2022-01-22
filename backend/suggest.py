@@ -1,7 +1,7 @@
 from bottle import route, run, HTTPResponse
 import json
 
-@route('/suggest')
+@route('/')
 def suggest():    
     body =json.dumps([
       {'id':1, 'title':'Vue.js', 'img':'/img/logo.png'},

@@ -1,0 +1,6 @@
+# version
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.16.0
+
+# plugin
+RUN bin/elasticsearch-plugin install analysis-icu
+RUN bin/elasticsearch-plugin install analysis-kuromoji

@@ -35,7 +35,7 @@
     },
     methods: {
       simpleSuggestionList() {
-        return fetch('http://localhost:8080/suggest', { method: 'GET', mode: "cors"})
+        return fetch('http://3.113.171.65/suggest', { method: 'GET', mode: "cors"})
           .then(response => response.json());
       }
     }

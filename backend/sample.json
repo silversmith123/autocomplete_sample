@@ -1,0 +1,16 @@
+[
+  {
+   "id": 1,
+   "suggest_word": "ソファ",
+   "search_word": "ソファ",
+   "img": "/img/logo.png",
+   "priority": "1"
+  },
+  {
+   "id": 2,
+   "suggest_word": "ソファ 幅110cm",
+   "search_word": "ソファ",
+   "img": "/img/logo.png",
+   "priority": "2"
+  }
+]

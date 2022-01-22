@@ -1,6 +1,7 @@
 <!-- Some component.vue -->
 <template>
   <VueSimpleSuggest
+    ref="suggest"
     v-model="chosen"
     :list="simpleSuggestionList">
 <!-- Filter by input text to only show the matching results -->
@@ -35,7 +36,9 @@
     },
     methods: {
       simpleSuggestionList() {
-        return fetch('http://3.113.171.65/suggest', { method: 'GET', mode: "cors"})
+        const qs = new URLSearchParams;
+        qs.append('text', this.$refs.suggest.text);
+        return fetch(`http://3.113.171.65/suggest?${qs}`, { method: 'GET', mode: "cors"})
           .then(response => response.json());
       }
     }

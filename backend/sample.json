@@ -8,9 +8,72 @@
   },
   {
    "id": 2,
-   "suggest_word": "ソファ 幅110cm",
+   "suggest_word": "1人掛けソファ",
    "search_word": "ソファ",
    "img": "/img/logo.png",
    "priority": "2"
-  }
+  },
+  {
+   "id": 3,
+   "suggest_word": "ソファ 幅110cm",
+   "search_word": "ソファ",
+   "img": "/img/logo.png",
+   "priority": "3"
+  },
+  {
+   "id": 4,
+   "suggest_word": "ソファ 日本製",
+   "search_word": "ソファ",
+   "img": "/img/logo.png",
+   "priority": "4"
+  },
+  {
+   "id": 4,
+   "suggest_word": "ソファ 完成品",
+   "search_word": "ソファ",
+   "img": "/img/logo.png",
+   "priority": "5"
+  },
+ {
+   "id": 6,
+   "suggest_word": "パソコンデスク",
+   "search_word": "PC",
+   "img": "/img/logo.png",
+   "priority": "1"
+  },
+ {
+   "id": 7,
+   "suggest_word": "パソコンデスク",
+   "search_word": "パソコン",
+   "img": "/img/logo.png",
+   "priority": "1"
+ },
+ {
+   "id": 8,
+   "suggest_word": "デスク",
+   "search_word": "デスク",
+   "img": "/img/logo.png",
+   "priority": "1"
+ },
+ {
+   "id": 9,
+   "suggest_word": "パソコンデスク",
+   "search_word": "デスク",
+   "img": "/img/logo.png",
+   "priority": "2"
+ },
+ {
+   "id": 10,
+   "suggest_word": "デスク 幅100cm以下",
+   "search_word": "デスク",
+   "img": "/img/logo.png",
+   "priority": "3"
+ },
+ {
+   "id": 11,
+   "suggest_word": "デスク 幅101〜120cm",
+   "search_word": "デスク",
+   "img": "/img/logo.png",
+   "priority": "4"
+ }
 ]

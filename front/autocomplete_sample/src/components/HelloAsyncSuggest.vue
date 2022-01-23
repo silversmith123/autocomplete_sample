@@ -17,7 +17,7 @@
     </div>
     <div slot="suggestion-item" slot-scope="{ suggestion }">
       <img :src="suggestion.img" width="30px"/>
-      <span>{{ suggestion.text }}</span>
+      <a :href="'https://www.google.com/search?q=' + encodeURI(suggestion.text)">{{ suggestion.text }}</a>
     </div>
   </VueSimpleSuggest>
 </template>

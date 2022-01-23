@@ -3,7 +3,8 @@
   <VueSimpleSuggest
     ref="suggest"
     v-model="chosen"
-    :list="simpleSuggestionList">
+    :list="simpleSuggestionList"
+    display-attribute="text">
 <!-- Filter by input text to only show the matching results -->
     <div slot="misc-item-above" slot-scope="{ suggestions, query }">
       <div class="misc-item">

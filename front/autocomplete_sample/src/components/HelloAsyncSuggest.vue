@@ -16,7 +16,7 @@
     </div>
     <div slot="suggestion-item" slot-scope="{ suggestion }">
       <img :src="suggestion.img" width="30px"/>
-      <span>{{ suggestion.title }}</span>
+      <span>{{ suggestion.text }}</span>
     </div>
   </VueSimpleSuggest>
 </template>

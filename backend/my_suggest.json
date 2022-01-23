@@ -387,6 +387,21 @@
           }
         }
       },
+      "suggest_word": { 
+        "type": "keyword",
+        "fields": { 
+          "suggest": { 
+            "type": "text",
+            "search_analyzer": "suggest_search_analyzer",
+            "analyzer": "suggest_index_analyzer" 
+          },
+          "readingform": { 
+            "type": "text",
+            "search_analyzer": "readingform_search_analyzer",
+            "analyzer": "readingform_index_analyzer" 
+          }
+        }
+      },
       "priority": {
         "type": "integer"} 
     } 

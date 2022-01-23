@@ -75,5 +75,33 @@
    "search_word": "デスク",
    "img": "/img/logo.png",
    "priority": "4"
+ },
+ {
+   "id": 12,
+   "suggest_word": "本棚",
+   "search_word": "ほんだな",
+   "img": "/img/logo.png",
+   "priority": "1"
+ },
+ {
+   "id": 13,
+   "suggest_word": "本棚 幅100cm",
+   "search_word": "ほんだな",
+   "img": "/img/logo.png",
+   "priority": "2"
+ },
+{
+   "id": 14,
+   "suggest_word": "本棚 ナチュラル",
+   "search_word": "ほんだな",
+   "img": "/img/logo.png",
+   "priority": "3"
+ },
+{
+   "id": 15,
+   "suggest_word": "本棚 北欧風",
+   "search_word": "ほんだな",
+   "img": "/img/logo.png",
+   "priority": "4"
  }
 ]

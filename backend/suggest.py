@@ -22,18 +22,16 @@ def suggest():
          ] 
        }
       },
-      "sort": "priority" 
+      "sort": "priority" ,
+      "collapse": {
+        "field": "suggest_word"
+      }
     }
+
     es_json = es.search(query, 'my_suggest')
     suggest = [{'id': v['_id'], 'text': v['_source']['suggest_word'], 'img': v['_source']['img']} for v in es_json['hits']['hits']]
-    unique = []
-    exists = []
-    for v in suggest:
-      if v['text'] not in exists:
-        unique.append(v)
-        exists.append(v['text'])
 
-    response = HTTPResponse(status=200, body=json.dumps(unique))
+    response = HTTPResponse(status=200, body=json.dumps(suggest))
     response.headers['Content-Type'] = 'application/json'
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS'

@@ -1,3 +1,4 @@
+from genericpath import exists
 from bottle import request, route, run, HTTPResponse
 from elasticsearch import Elasticsearch
 import json
@@ -24,9 +25,15 @@ def suggest():
       "sort": "priority" 
     }
     es_json = es.search(query, 'my_suggest')
-    body = [{'id': v['_id'], 'text': v['_source']['suggest_word'], 'img': v['_source']['img']} for v in es_json['hits']['hits']]
+    suggest = [{'id': v['_id'], 'text': v['_source']['suggest_word'], 'img': v['_source']['img']} for v in es_json['hits']['hits']]
+    unique = []
+    exists = []
+    for v in suggest:
+      if v['text'] not in exists:
+        unique.append(v)
+        exists.append(v['text'])
 
-    response = HTTPResponse(status=200, body=json.dumps(body))
+    response = HTTPResponse(status=200, body=json.dumps(unique))
     response.headers['Content-Type'] = 'application/json'
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS'

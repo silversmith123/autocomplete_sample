@@ -45,6 +45,7 @@
           .then(response => response.json());
       },
       onSuggestClick (suggest) {
+        //トラッキングもこの位置を想定
         location = 'https://www.google.com/search?q=' + encodeURI(suggest.text);
       }
     }

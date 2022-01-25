@@ -4,7 +4,9 @@
     ref="suggest"
     v-model="chosen"
     :list="simpleSuggestionList"
-    display-attribute="text">
+    display-attribute="text"
+    @suggestion-click="onSuggestClick"
+>
 <!-- Filter by input text to only show the matching results -->
     <div slot="misc-item-above" slot-scope="{ suggestions, query }">
       <div class="misc-item">
@@ -16,10 +18,8 @@
       <hr>
     </div>
     <div slot="suggestion-item" slot-scope="{ suggestion }">
-      <a :href="'https://www.google.com/search?q=' + encodeURI(suggestion.text)" style="color:black;text-decoration:none;" >
         <img :src="suggestion.img" width="30px"/>
         <span>{{ suggestion.text }}</span>
-      </a>
     </div>
   </VueSimpleSuggest>
 </template>
@@ -43,6 +43,9 @@
         qs.append('text', this.$refs.suggest.text);
         return fetch(`http://3.113.171.65/suggest?${qs}`, { method: 'GET', mode: "cors"})
           .then(response => response.json());
+      },
+      onSuggestClick (suggest) {
+        location = 'https://www.google.com/search?q=' + encodeURI(suggest.text);
       }
     }
   }

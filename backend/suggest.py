@@ -1,4 +1,3 @@
-from genericpath import exists
 from bottle import request, route, run, HTTPResponse
 from elasticsearch import Elasticsearch
 import json

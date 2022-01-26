@@ -1,0 +1,1 @@
+* * * * * cd /home/ec2-user/autocomplete_sample/backend;/home/ec2-user/.pyenv/shims/pipenv run python warming.py >> /home/ec2-user/warming_log 2>&1

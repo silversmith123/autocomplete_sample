@@ -12,5 +12,5 @@ do
  curl "localhost/suggest?text=sofa"
  curl "localhost/suggest?text=desk"
  curl "localhost/suggest?text=hon"
- sleep 1
+ sleep 0.1
 done

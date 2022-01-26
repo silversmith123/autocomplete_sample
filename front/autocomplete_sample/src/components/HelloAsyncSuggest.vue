@@ -3,6 +3,8 @@
   <VueSimpleSuggest
     ref="suggest"
     v-model="chosen"
+    :min-length="0"
+    :debounce="150"
     :list="simpleSuggestionList"
     display-attribute="text"
     @suggestion-click="onSuggestClick"

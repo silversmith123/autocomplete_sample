@@ -7,6 +7,7 @@ name = "pypi"
 bottle = "*"
 mod-wsgi = "*"
 elasticsearch = "*"
+requests = "*"
 
 [dev-packages]
 

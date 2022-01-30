@@ -26,5 +26,5 @@ def edge_ngram(word):
 search_words = ['ソファ', 'PC', 'パソコン', 'デスク', 'ほんだな']
 for w in search_words:
   for text in edge_ngram(w):
-    req = requests.get('http://localhost/suggest', params={'text': token['token']})
+    req = requests.get('http://localhost/suggest', params={'text': text})
     print(text)
